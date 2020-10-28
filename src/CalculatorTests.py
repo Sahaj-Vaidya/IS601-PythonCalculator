@@ -21,10 +21,16 @@ class CalculatorTest(unittest.TestCase):
         self.assertEqual(3, self.calculator.divide(9, 3))
 
     def test_square(self):
-        self.assertEqual(4, self.calculator.square(16))
+        self.assertEqual(16, self.calculator.square(4))
 
     def test_root(self):
-        self.assertEqual(25, self.calculator.squareroot(25))
+        self.assertEqual(5, self.calculator.squareroot(25, 5))
+
+    def test_seven(self):
+        self.assertEqual(18, self.calculator.multiple(9, 2))
+
+    def test_eight(self):
+        self.assertEqual(625, self.calculator.square(25))
 
 
 if __name__ == "__main__":
