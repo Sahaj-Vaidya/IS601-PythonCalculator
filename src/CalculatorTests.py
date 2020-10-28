@@ -1,9 +1,24 @@
 import unittest
 from Calculator import Calculator
+from CSVReader.CSVReader import CSVReader
 
 
 class CalculatorTest(unittest.TestCase):
     calculator = Calculator()
+
+    def test_subtraction(self):
+        test_data = CSVReader("C:/Users/sahaj/SahajData/NJIT/IS_601/Unit Test Subtraction.csv").data
+        for row in test_data:
+            result = float(row['Result'])
+            self.assertEqual(self.calculator.minus(row['Value 1'], row['Value 2']), result)
+            self.assertEqual(self.calculator, result)
+
+    def test_addition(self):
+        test_data = CSVReader("C:/Users/sahaj/SahajData/NJIT/IS_601/Unit Test Addition.csv").data
+        for row in test_data:
+            result = float(row['Result'])
+            self.assertEqual(self.calculator.add(row['Value 1'], row['Value 2']), result)
+            self.assertEqual(self.calculator, result)
 
     def test_add(self):
         self.assertEqual(4, self.calculator.add(2, 2))
