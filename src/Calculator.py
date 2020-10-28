@@ -20,7 +20,7 @@ class Calculator:
         return x/y
 
     def square(self, x):
-        return x ^ 2
+        return x ** 2
 
     def squareroot(self, x , y):
-        return math.sqrt(x , y)
+        return math.sqrt(x)
