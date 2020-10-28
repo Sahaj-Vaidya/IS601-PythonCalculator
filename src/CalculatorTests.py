@@ -60,13 +60,13 @@ class CalculatorTest(unittest.TestCase):
         self.assertEqual(12, self.calculator.multiple(3, 4))
         self.assertEqual(13.5, self.calculator.multiple(3, 4.5))
 
-    def test_divide(self):
+    def test_division(self):
         self.assertEqual(3, self.calculator.divide(9, 3))
 
-    def test_square(self):
+    def test_squares(self):
         self.assertEqual(16, self.calculator.square(4))
 
-    def test_root(self):
+    def test_sqroot(self):
         self.assertEqual(5, self.calculator.squareroot(25, 5))
 
     def test_seven(self):
