@@ -7,42 +7,42 @@ class CalculatorTest(unittest.TestCase):
     calculator = Calculator()
 
     def test_subtraction(self):
-        test_data = CSVReader("C:/Users/sahaj/SahajData/NJIT/IS_601/Unit Test Subtraction.csv").data
+        test_data = CSVReader("Data/Unit Test Subtraction.csv").data
         for row in test_data:
             result = float(row['Result'])
             self.assertEqual(self.calculator.minus(row['Value 1'], row['Value 2']), result)
             self.assertEqual(self.calculator, result)
 
     def test_addition(self):
-        test_data = CSVReader("C:/Users/sahaj/SahajData/NJIT/IS_601/Unit Test Addition.csv").data
+        test_data = CSVReader("Data/Unit Test Addition.csv").data
         for row in test_data:
             result = float(row['Result'])
             self.assertEqual(self.calculator.add(row['Value 1'], row['Value 2']), result)
             self.assertEqual(self.calculator, result)
 
     def test_multiply(self):
-        test_data = CSVReader("C:/Users/sahaj/SahajData/NJIT/IS_601/Unit Test Multiplication.csv").data
+        test_data = CSVReader("Data/Unit Test Multiplication.csv").data
         for row in test_data:
             result = float(row['Result'])
             self.assertEqual(self.calculator.multiple(row['Value 1'], row['Value 2']), result)
             self.assertEqual(self.calculator, result)
 
     def test_divide(self):
-        test_data = CSVReader("C:/Users/sahaj/SahajData/NJIT/IS_601/Unit Test Division.csv").data
+        test_data = CSVReader("Data/Unit Test Division.csv").data
         for row in test_data:
             result = float(row['Result'])
             self.assertEqual(self.calculator.divide(row['Value 1'], row['Value 2']), result)
             self.assertEqual(self.calculator, result)
 
     def test_square(self):
-        test_data = CSVReader("C:/Users/sahaj/SahajData/NJIT/IS_601/Unit Test Square.csv").data
+        test_data = CSVReader("Data/Unit Test Square.csv").data
         for row in test_data:
             result = float(row['Result'])
             self.assertEqual(self.calculator.square(row['Value 1']), result)
             self.assertEqual(self.calculator, result)
 
     def test_root(self):
-        test_data = CSVReader("C:/Users/sahaj/SahajData/NJIT/IS_601/Unit Test Root.csv").data
+        test_data = CSVReader("Data/Unit Test Square Root.csv").data
         for row in test_data:
             result = float(row['Result'])
             self.assertEqual(self.calculator.squareroot(row['Value 1'], row['Value 2']), result)
